@@ -9,6 +9,23 @@
     <p>
         The following examples demonstrate how it is possible to generate and save any type of data right in the browser using the <code>saveAs()</code> FileSaver interface, without contacting any servers.
     </p>
+    <section id="image-demo">
+        <h2>Saving an image</h2>
+        <canvas class="input" id="canvas" width="500" height="300"/>
+        <form id="canvas-options">
+            <label>Filename: <input type="text" class="filename" id="canvas-filename" placeholder="doodle"/>.png</label>
+            <input type="submit" value="Save"/>
+            <input type="button" id="canvas-clear" value="Clear"/>
+        </form>
+    </section>
+    <section id="text-demo">
+        <h2>Saving text</h2>
+        <textarea class="input" id="text" placeholder="Once upon a time..."/>
+        <form id="text-options">
+            <label>Filename: <input type="text" class="filename" id="text-filename" placeholder="a plain document"/>.txt</label>
+            <input type="submit" value="Save"/>
+        </form>
+    </section>
     <section id="html-demo">
         <h2>Saving rich text</h2>
         <div class="input" id="html" contenteditable="">

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <div id="status"></div>
+    <script>
+      if (window.ApplePaySession) {
+         var div = document.querySelector('#status');
+         ApplePaySession.canMakePayments() ? div.innerHTML = '<h1>Apple Pay Available</h1>' : div.innerHTML = '<h1>No Apple Pay</h1>';
+      }
+    </script>
+  </body>
+</html>

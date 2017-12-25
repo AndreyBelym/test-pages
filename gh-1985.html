@@ -4,7 +4,9 @@
   <body>
     <div id="status"></div>
     <script>
-         window.ApplePaySession && window.ApplePaySession.canMakePayments() ? div.innerHTML = '<h1>Apple Pay Available</h1>' : div.innerHTML = '<h1>No Apple Pay</h1>';
+      var div = document.querySelector('#status');
+      
+      window.ApplePaySession && window.ApplePaySession.canMakePayments() ? div.innerHTML = '<h1>Apple Pay Available</h1>' : div.innerHTML = '<h1>No Apple Pay</h1>';
     </script>
   </body>
 </html>

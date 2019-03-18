@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input id="testPasteInput">
+    <button onclick="pasteFromCode()">Paste</button>
+    <script>
+        const testPasteInput = document.getElementById('testPasteInput');
+        testPasteInput.addEventListener('paste', ({clipboardData}) => console.log(clipboardData.getData('text')));
+
+        function pasteFromCode() {
+            const clipboardEvent = new ClipboardEvent('paste', { dataType: 'text/plain', data: '123' });
+            testPasteInput.dispatchEvent(clipboardEvent);
+        }
+    </script>
+</body>
+</html>

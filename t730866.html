@@ -3,12 +3,12 @@
 <head>
   <title>TestCafe Example</title>
   <script>
-    window.log = text => log.innerHTML = text + '<br>\n';
+    window.log = text => window['log-content'].innerHTML = text + '<br>\n';
   </script>
 </head>
 <body>
   <div id="content">
-     <div id="log"></div>
+     <div id="log-content"></div>
      <button onclick="log(1)">Add 1</button>
      <button onclick="log(2)">Add 2</button>
      <button onclick="log(3)">Add 3</button>
